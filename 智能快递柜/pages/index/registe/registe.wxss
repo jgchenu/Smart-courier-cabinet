@@ -1,0 +1,42 @@
+/* pages/index/registe/registe.wxss */
+
+.registe {
+  width: 600rpx;
+  margin: 100rpx auto;
+}
+
+.input-container {
+  position: relative;
+}
+
+.input-container text {
+  position: absolute;
+  font-size: 40rpx;
+  bottom: 2rpx;
+}
+
+.input-container input {
+  width: 400rpx;
+  border-bottom: 1rpx solid #000;
+  padding-left: 200rpx;
+  margin-top: 40rpx;
+}
+
+.select-container {
+  margin-top: 40rpx;
+}
+
+.select-container text {
+  font-size: 36rpx;
+}
+
+.select-container picker {
+  display: inline-block;
+  margin-left: 100rpx;
+  font-size: 36rpx;
+}
+.registe-button{
+  width: 500rpx;
+  height: 100rpx;
+  margin: 100rpx auto;
+}

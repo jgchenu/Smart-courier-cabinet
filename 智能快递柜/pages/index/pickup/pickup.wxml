@@ -1,0 +1,7 @@
+<!--pages/index/pickup/pickup.wxml-->
+<view class='pickup'>
+  <view>你的快递在:
+    <text>1</text>号柜</view>
+  <view class='tips'>取件后请确认关好柜门!</view>
+  <button class='sure-button' plain="true" bindtap='deposits'>确认取件</button>
+</view>

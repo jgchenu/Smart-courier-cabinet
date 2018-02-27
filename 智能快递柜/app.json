@@ -1,0 +1,19 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/index/registe/registe",
+    "pages/index/pickup/pickup",
+    "pages/index/pickupSucc/pickupSucc",
+    "pages/index/enterVercode/enterVercode",
+    "pages/index/depSucess/depSucess",
+    "pages/index/deposits/deposits",
+    "pages/index/enter/enter",
+    "pages/index/login/login"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  }
+}

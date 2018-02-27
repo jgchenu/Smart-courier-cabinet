@@ -1,0 +1,26 @@
+<!--pages/index/login/login.wxml-->
+<view>
+  <image src='/images/logo.png' mode="aspectFill" class='logo'></image>
+  <view class='loginContainer'>
+    <view class='inputs'>
+      <view class='inputs-container'>
+        <image src='/images/phone.png'></image>
+        <input class='account' placeholder='请输入手机号' type='number' bindinput="bindPhoneInput"></input>
+      </view>
+      <view class='inputs-container'>
+        <image src='/images/password.png'></image>
+        <input class='password' placeholder='请输入密码' type='password' bindinput="bindPassInput"></input>
+      </view>
+    </view>
+    <view class='operating'>
+      <view class='check-container'>
+        <checkbox></checkbox>
+        <text>记住我</text>
+      </view>
+      <view class='registered' bindtap='toRegiste'>
+        <text>注册</text>
+      </view>
+    </view>
+    <button class='login-button' plain="true" bindtap='toEnter'>登录</button>
+  </view>
+</view>

@@ -1,0 +1,7 @@
+<!--pages/index/enter/enter.wxml-->
+<view class='enterPhone'>
+
+  <text>请输入收件人手机号</text>
+  <input class='phone' bindinput="bindPhoneInput" type='number'></input>
+  <button class='next-button' plain="true" bindtap='toDeposits'>下一步</button>
+</view>

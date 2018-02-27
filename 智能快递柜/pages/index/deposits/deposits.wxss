@@ -1,0 +1,17 @@
+/* pages/index/deposits/deposits.wxss */
+.deposits{
+  margin-top: 100rpx;
+  font-size: 50rpx;
+  text-align: center;
+}
+.tips{
+  margin-top: 20rpx;
+  font-size: 30rpx;
+  color: #ccc;
+}
+.sure-button {
+  width: 300rpx;
+  height: 100rpx;
+  margin: 500rpx auto 0 auto;
+  line-height: 100rpx;
+}

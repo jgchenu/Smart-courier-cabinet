@@ -1,0 +1,15 @@
+.deposits, .pickup {
+  width: 300rpx;
+  height: 300rpx;
+  font-size: 50rpx;
+  border-radius: 50%;
+  line-height: 300rpx;
+  text-align: center;
+  margin: 140rpx auto;
+  background-color: rgb(109, 207, 210);
+  color: #fff;
+}
+
+.pickup {
+  background-color: rgb(137, 193, 210);
+}

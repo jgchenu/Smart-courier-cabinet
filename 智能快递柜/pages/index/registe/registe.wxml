@@ -1,0 +1,28 @@
+<!--pages/index/registe/registe.wxml-->
+<view class='registe'>
+  <view class='input-container'>
+    <text>姓名:</text>
+    <input bindinput="bindNameInput"></input>
+  </view>
+  <view class='input-container'>
+    <text>手机号</text>
+    <input type='number' bindinput="bindPhoneInput"></input>
+  </view>
+  <view class='input-container'>
+    <text>密码:</text>
+    <input type='password' bindinput="bindPwInput"></input>
+  </view>
+  <view class='input-container'>
+    <text>确认密码:</text>
+    <input type='password'  bindinput="bindRepwInput"></input>
+  </view>
+  <view class='select-container'>
+    <text>所属快递公司:</text>
+    <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+      <view class="picker">
+        {{array[index]}}
+      </view>
+    </picker>
+  </view>
+  <button class='registe-button' plain="true" bindtap='registe'>注册</button>
+</view>

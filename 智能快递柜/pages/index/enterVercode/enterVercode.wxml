@@ -1,0 +1,7 @@
+<!--pages/index/enterVercode/enterVercode.wxml-->
+<view class='enterPhone'>
+
+  <text>请输入短信随机码</text>
+  <input class='phone' bindinput="bindPhoneInput" type='number'></input>
+  <button class='next-button' plain="true" bindtap='toDeposits'>下一步</button>
+</view>

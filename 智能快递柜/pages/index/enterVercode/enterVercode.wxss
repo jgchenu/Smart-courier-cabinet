@@ -1,0 +1,21 @@
+/* pages/index/enterVercode/enterVercode.wxss */
+.enterPhone {
+  margin-top: 140rpx;
+  text-align: center;
+  font-size: 40rpx;
+}
+
+.phone {
+  height: 80rpx;
+  width: 500rpx;
+  border: 1rpx solid #000;
+  border-radius: 10rpx;
+  margin: 40rpx auto;
+}
+
+.next-button {
+  width: 200rpx;
+  height: 100rpx;
+  margin: 100rpx auto;
+  line-height: 100rpx;
+}

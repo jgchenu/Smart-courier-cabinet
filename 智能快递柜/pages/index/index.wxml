@@ -1,0 +1,9 @@
+<!--index.wxml-->
+<view class="container">
+  <view class='deposits' bindtap='toDeposits'>
+    存件
+  </view>
+  <view class='pickup' bindtap='toPickup'>
+    取件
+  </view>
+</view>
