@@ -13,12 +13,21 @@
 
 
 ![image](https://github.com/jgchenu/Smart-courier-cabinet/blob/master/images/1.jpg)
-![image](https://github.com/jgchenu/Smart-courier-cabinet/blob/master/images/2.jpg)
-![image](https://github.com/jgchenu/Smart-courier-cabinet/blob/master/images/10.jpg)
-![image](https://github.com/jgchenu/Smart-courier-cabinet/blob/master/images/3.jpg)
-![image](https://github.com/jgchenu/Smart-courier-cabinet/blob/master/images/4.jpg)
-![image](https://github.com/jgchenu/Smart-courier-cabinet/blob/master/images/5.jpg)
-![image](https://github.com/jgchenu/Smart-courier-cabinet/blob/master/images/6.jpg)
-![image](https://github.com/jgchenu/Smart-courier-cabinet/blob/master/images/7.jpg)
-![image](https://github.com/jgchenu/Smart-courier-cabinet/blob/master/images/8.jpg)
-![image](https://github.com/jgchenu/Smart-courier-cabinet/blob/master/images/9.jpg)
+
+![image](https://github.com/jgchenu/Smart-courier-cabinet/blob/master/images/2.png)
+
+![image](https://github.com/jgchenu/Smart-courier-cabinet/blob/master/images/10.png)
+
+![image](https://github.com/jgchenu/Smart-courier-cabinet/blob/master/images/3.png)
+
+![image](https://github.com/jgchenu/Smart-courier-cabinet/blob/master/images/4.png)
+
+![image](https://github.com/jgchenu/Smart-courier-cabinet/blob/master/images/5.png)
+
+![image](https://github.com/jgchenu/Smart-courier-cabinet/blob/master/images/6.png)
+
+![image](https://github.com/jgchenu/Smart-courier-cabinet/blob/master/images/7.png)
+
+![image](https://github.com/jgchenu/Smart-courier-cabinet/blob/master/images/8.png)
+
+![image](https://github.com/jgchenu/Smart-courier-cabinet/blob/master/images/9.png)
