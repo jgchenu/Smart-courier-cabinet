@@ -2,19 +2,19 @@
 <view class='registe'>
   <view class='input-container'>
     <text>姓名:</text>
-    <input bindinput="bindNameInput"></input>
+    <input bindinput="bindNameInput" value='{{name}}'></input>
   </view>
   <view class='input-container'>
     <text>手机号</text>
-    <input type='number' bindinput="bindPhoneInput"></input>
+    <input type='number' bindinput="bindPhoneInput" value='{{phone}}'></input>
   </view>
   <view class='input-container'>
     <text>密码:</text>
-    <input type='password' bindinput="bindPwInput"></input>
+    <input type='password' bindinput="bindPwInput" value='{{pw}}'></input>
   </view>
   <view class='input-container'>
     <text>确认密码:</text>
-    <input type='password'  bindinput="bindRepwInput"></input>
+    <input type='password'  bindinput="bindRepwInput" value='{{repw}}'></input>
   </view>
   <view class='select-container'>
     <text>所属快递公司:</text>

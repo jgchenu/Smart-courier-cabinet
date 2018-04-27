@@ -1,14 +1,14 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/index/registe/registe",
-    "pages/index/pickup/pickup",
     "pages/index/pickupSucc/pickupSucc",
+    "pages/index/pickup/pickup",
     "pages/index/enterVercode/enterVercode",
     "pages/index/depSucess/depSucess",
     "pages/index/deposits/deposits",
-    "pages/index/enter/enter",
-    "pages/index/login/login"
+    "pages/index/login/login",
+    "pages/index/registe/registe",
+    "pages/index/enter/enter"
   ],
   "window": {
     "backgroundTextStyle": "light",

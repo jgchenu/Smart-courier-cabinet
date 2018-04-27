@@ -1,7 +1,7 @@
 <!--pages/index/deposits/deposits.wxml-->
 <view class='deposits'>
   <view>请使用
-    <text>1</text>号柜</view>
+    <text>{{chestid}}</text>号柜</view>
   <view class='tips'>存件后请确认关好柜门!</view>
   <button class='sure-button' plain="true" bindtap='deposits'>确认存件</button>
 </view>

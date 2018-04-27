@@ -5,11 +5,11 @@
     <view class='inputs'>
       <view class='inputs-container'>
         <image src='/images/phone.png'></image>
-        <input class='account' placeholder='请输入手机号' type='number' bindinput="bindPhoneInput"></input>
+        <input class='account' placeholder='请输入手机号' type='number' bindinput="bindPhoneInput" value='{{phone}}'></input>
       </view>
       <view class='inputs-container'>
         <image src='/images/password.png'></image>
-        <input class='password' placeholder='请输入密码' type='password' bindinput="bindPassInput"></input>
+        <input class='password' placeholder='请输入密码' type='password' bindinput="bindPassInput" value='{{password}}'></input>
       </view>
     </view>
     <view class='operating'>

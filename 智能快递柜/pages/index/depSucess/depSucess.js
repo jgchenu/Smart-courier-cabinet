@@ -1,12 +1,21 @@
 // pages/index/depSucess/depSucess.js
+let getTime = require('../../../utils/getTime.js')
+let app = getApp();
+let globalData = app.globalData;
+let baseUrl = globalData.baseUrl;
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    chestid: "",
+    name: "",
+    phone: "",
+    company: "",
+    time: ""
   },
+
   toEnter: function () {
     wx.navigateTo({
       url: '../enter/enter',
@@ -21,7 +30,31 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    let chestid = options.chestid;
+    console.log(chestid);
+    wx.request({
+      url: `${baseUrl}/deposits/success/${chestid}`,
+      method: 'GET',
+      header: {
+        "Content-type": "application/json"
+      },
+      success: (res) => {
+        if (res.data.code === 200200) {
+          let time = getTime(new Date(res.data.time).getTime());
+          this.setData({
+            chestid: res.data.chestid,
+            company: res.data.company,
+            name: res.data.name,
+            phone: res.data.phone,
+            time: time
+          })
+        } else {
+          wx.navigateTo({
+            url: '../index',
+          })
+        }
+      }
+    })
   },
 
   /**

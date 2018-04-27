@@ -1,12 +1,15 @@
 // pages/index/login/login.js
+let app = getApp();
+let globalData = app.globalData;
+let baseUrl = globalData.baseUrl;
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    password: null,
-    phone: null
+    password: '',
+    phone: ''
   },
   //方法
   bindPhoneInput: function (e) {
@@ -41,18 +44,46 @@ Page({
       })
     }
     else {
-      wx.showToast({
-        title: '登录成功',
-        icon: 'success',
-        duration: 1000,
-        success: () => {
-          setTimeout(() => {
-            wx.navigateTo({
-              url: '../enter/enter',
+      wx.request({
+        url: `${baseUrl}/user/login`,
+        method: 'post',
+        header: {
+          "Content-type": "application/json"
+        },
+        data: {
+          phone: this.data.phone,
+          password: this.data.password
+        },
+        success: res => {
+          console.log(res);
+          if (res.data.code === 200200) {
+            globalData.manid=res.data.manid;
+            wx.showToast({
+              title: res.data.msg,
+              icon: 'success',
+              duration: 1000,
+              success: () => {
+                setTimeout(() => {
+                  wx.navigateTo({
+                    url: '../enter/enter',
+                  })
+                }, 1000)
+              }
             })
-          }, 1000)
+          } else if (res.data.code === 200201 || 200202) {
+            wx.showToast({
+              title: res.data.msg,
+              icon: 'none',
+              duration: 1000
+            })
+          }
+        },
+        fail: err => {
+          console.log(err.response);
         }
       })
+
+
     }
   },
   /**

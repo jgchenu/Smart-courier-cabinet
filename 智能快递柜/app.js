@@ -1,5 +1,10 @@
 App({
-
+  globalData: {
+    phone: "0",
+    vercode: "0",
+    baseUrl: "http://127.0.0.1/api",
+    manid: "0"
+  },
   /**
    * 当小程序初始化完成时，会触发 onLaunch（全局只触发一次）
    */

@@ -1,18 +1,18 @@
 <!--pages/index/depSucess/depSucess.wxml-->
 <view class='depSuccess'>
   <view>快递员:
-    <text>陈建光</text>
+    <text>{{name}}</text>
   </view>
   <view>快递公司:
-    <text>顺丰快递</text>
+    <text>{{company}}</text>
   </view>
   <view>收件人:
-    <text></text>13005416332</view>
+    <text></text>{{phone}}</view>
   <view>柜号:
-    <text>1号柜</text>
+    <text>{{chestid}}号柜</text>
   </view>
   <view>时间:
-    <text></text>2018-2-17 11:48</view>
+    <text></text>{{time}}</view>
   <button class='enter-button' plain="true" bindtap='toEnter'>继续存件</button>
   <button class='quit-button' plain="true" bindtap='quit'>退出</button>
 </view>

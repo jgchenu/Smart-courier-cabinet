@@ -1,31 +1,66 @@
 // pages/index/pickup/pickup.js
+let app = getApp();
+let globalData = app.globalData;
+let baseUrl = globalData.baseUrl;
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    chestid: ""
   },
   deposits: function () {
-    wx.showToast({
-      title: '取件成功',
-      icon: 'success',
-      duration: 1000,
-      success: () => {
-        setTimeout(() => {
-          wx.navigateTo({
-            url: '../pickupSucc/pickupSucc',
+    let chestid = this.data.chestid;
+    wx.request({
+      url: `${baseUrl}/takeout/sure`,
+      method: 'POST',
+      header: {
+        "Content-type": "application/json"
+      },
+      data: {
+        vercode: globalData.vercode,
+        chestid: chestid
+      },
+      success: (res) => {
+        console.log(res);
+        if (res.data.code === 200200) {
+          wx.showToast({
+            title: res.data.msg,
+            icon: 'success',
+            duration: 1000,
+            success: () => {
+              setTimeout(() => {
+                wx.navigateTo({
+                  url: '../pickupSucc/pickupSucc',
+                })
+              }, 1000)
+            }
           })
-        }, 1000)
+        }
+
       }
     })
+
   },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    wx.request({
+      url: `${baseUrl}/takeout/enter/${globalData.vercode}`,
+      method: 'GET',
+      header: {
+        "Content-type": "application/json"
+      },
+      success: (res) => {
+        console.log(res);
+        this.setData({
+          chestid: res.data.chestid
+        })
+      }
+    })
   },
 
   /**

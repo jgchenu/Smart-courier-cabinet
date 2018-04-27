@@ -1,22 +1,26 @@
 /* pages/index/depSucess/depSucess.wxss */
-.depSuccess{
-  width: 500rpx;
-  margin: 110rpx 100rpx;
+
+.depSuccess {
+  width: 600rpx;
+  margin: 110rpx auto;
   font-size: 40rpx;
 }
-.depSuccess view{
+
+.depSuccess view {
   margin: 10rpx 0;
 }
-.depSuccess text{
-  margin-left:40rpx;
+
+.depSuccess text {
+  margin-left: 40rpx;
 }
 
-.enter-button,.quit-button {
+.enter-button, .quit-button {
   width: 300rpx;
   height: 100rpx;
   margin: 60rpx auto 0 auto;
   line-height: 100rpx;
 }
-.enter-button{
+
+.enter-button {
   margin-top: 140rpx;
 }

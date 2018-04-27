@@ -1,4 +1,5 @@
 // pages/index/enter/enter.js
+let app = getApp();
 Page({
 
   /**
@@ -22,6 +23,7 @@ Page({
       })
     }
     else {
+      app.globalData.phone = this.data.phone;
       wx.showToast({
         title: '手机验证通过',
         icon: 'success',

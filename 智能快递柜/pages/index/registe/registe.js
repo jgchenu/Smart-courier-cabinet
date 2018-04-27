@@ -1,4 +1,7 @@
 // pages/index/registe/registe.js
+let app = getApp();
+let globalData = app.globalData;
+let baseUrl = globalData.baseUrl;
 Page({
 
   /**
@@ -8,7 +11,7 @@ Page({
     array: ['申通快递', '圆通快递', '韵达快递', '顺丰快递'],
     index: 0,
     name: "",
-    phone: "",
+    phone: '',
     pw: "",
     repw: ""
   },
@@ -61,7 +64,7 @@ Page({
         icon: 'none',
         duration: 1000
       })
-    } else if (this.data.pw!==this.data.repw) {
+    } else if (this.data.pw !== this.data.repw) {
       console.log(this.data);
       wx.showToast({
         title: '两次密码输入不一致',
@@ -70,18 +73,47 @@ Page({
       })
     }
     else {
-      wx.showToast({
-        title: '注册成功',
-        icon: 'success',
-        duration: 1000,
-        success: () => {
-          setTimeout(() => {
-            wx.navigateTo({
-              url: '../login/login',
+      wx.request({
+        url: `${baseUrl}/user/register`,
+        method: 'post',
+        header: {
+          "Content-type": "application/json"
+        },
+        data: {
+          name: this.data.name,
+          password: this.data.pw,
+          phone: this.data.phone,
+          company: this.data.array[this.data.index]
+        },
+        success: (res) => {
+          console.log(res);
+          if (res.data.code == 200200) {
+            wx.showToast({
+              title: res.data.msg,
+              icon: 'success',
+              duration: 1000,
+              success: () => {
+                setTimeout(() => {
+                  wx.navigateTo({
+                    url: '../login/login',
+                  })
+                }, 1000)
+              }
             })
-          }, 1000)
+          }else if(res.data.code==200201){
+            wx.showToast({
+              title: res.data.msg,
+              icon: 'none',
+              duration: 1000
+            })
+          }
+        },
+        fail: (err) => {
+
         }
       })
+
+
     }
   },
   /**

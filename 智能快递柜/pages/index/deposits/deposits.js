@@ -1,31 +1,93 @@
 // pages/index/deposits/deposits.js
+let app = getApp();
+let globalData = app.globalData;
+let baseUrl = globalData.baseUrl;
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    chestid: ""
   },
   deposits: function () {
-    wx.showToast({
-      title: '存件成功',
-      icon: 'success',
-      duration: 1000,
-      success: () => {
-        setTimeout(() => {
-          wx.navigateTo({
-            url: '../depSucess/depSucess',
+    wx.request({
+      url: `${baseUrl}/deposits/sure`,
+      method: 'POST',
+      header: {
+        "Content-type": "application/json"
+      },
+      data: {
+        chestid: this.data.chestid,
+        phone: globalData.phone,
+        manid: globalData.manid
+      },
+      success: (res) => {
+        console.log(res);
+        if (res.data.code == 200200) {
+          wx.showToast({
+            title: res.data.msg,
+            icon: 'success',
+            duration: 1000,
+            success: () => {
+              wx.showToast({
+                title: '存件成功',
+                icon: 'success',
+                duration: 1000,
+                success: () => {
+                  setTimeout(() => {
+                    wx.navigateTo({
+                      url: `../depSucess/depSucess?chestid=${this.data.chestid}`,
+                    })
+                  }, 1000)
+                }
+              })
+            }
           })
-        }, 1000)
+        }
       }
     })
+
+
   },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    wx.request({
+      url: `${baseUrl}/deposits/find`,
+      method: 'GET',
+      header: {
+        "Content-type": "application/json"
+      },
+      success: (res) => {
+        if (res.data.code == 200200) {
+          wx.showToast({
+            title: res.data.msg,
+            icon: 'success',
+            duration: 1000,
+            success: () => {
+              this.setData({
+                chestid: res.data.chestid
+              });
+            }
+          })
+        } else if (res.data.code == 200201) {
+          wx.showToast({
+            title: res.data.msg,
+            icon: 'none',
+            duration: 1000,
+            success: () => {
+              setTimeout(() => {
+                wx.navigateBack({
+                  delta: 1
+                })
+              }, 1000)
+            }
+          })
+        }
+      }
+    })
   },
 
   /**
