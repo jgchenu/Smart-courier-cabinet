@@ -2,7 +2,7 @@ App({
   globalData: {
     phone: "0",
     vercode: "0",
-    baseUrl: "http://127.0.0.1/api",
+    baseUrl: "http://127.0.0.1:8080/api",
     manid: "0"
   },
   /**
